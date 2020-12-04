@@ -1,0 +1,198 @@
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+     /*39.윈도우 창에 가로스크롤 생기는 부분 처리*/
+     /*53. 로딩시 가로세로 스크롤 모두 없애기*/
+  html,body{
+          overflow: hidden;
+      }
+
+  body{
+    font-family: 'RIDIBatang','Open Sans', sans-serif;
+    height: 100vh;
+    position: relative;
+    
+  }
+
+  :root{
+        --gold : #F3D219;
+        --black :black;
+        --red : #901212;
+        --white:white;
+        --green: #186418;
+      }
+ #topCarousel{
+        overflow: hidden;
+      }
+      /*5.캐로셀 안의 이미지 사이즈를 동일하게 맞추거나 화면높이에 이미지 높이 맞추기위해 img태그를 삭제하고 .carousel-item에 이미지를 css로 넣고 코딩으로 사이즈 맞추기*/
+      #topCarousel .carousel-item:nth-of-type(1){
+        background: url(../img/2000px_img/DiaryHeroArticle01.jpg) no-repeat center / cover;
+        height: 100vh;
+      }
+
+      #topCarousel .carousel-item:nth-of-type(2){
+        background: url(../img/2000px_img/DiaryHeroArticle02.jpg) no-repeat center / cover;
+        height: 100vh;
+      }
+
+      #topCarousel .carousel-item:nth-of-type(3){
+        background: url(../img/2000px_img/DiaryHeroArticle03.jpg) no-repeat center / cover;
+        height: 100vh;
+      }
+       #topCarousel .carousel-item:nth-of-type(4){
+        background: url(../img/2000px_img/DiaryHeroArticle04.jpg) no-repeat center / cover;
+        height: 100vh;
+      }
+
+      /*7.캐로셀 안에 캡션대신 넣은 이미지 위치 맞추기*/
+      #topCarousel .carousel-item:nth-of-type(1) .carousel-caption{
+        /*border: 1px solid red;*/
+        bottom: 350px;
+      }
+     
+      #topCarousel .carousel-item:nth-of-type(2) .carousel-caption{
+        /*border: 1px solid red;*/
+        bottom: 50px;
+      }
+
+      #topCarousel .carousel-item:nth-of-type(3) .carousel-caption{
+        /*border: 1px solid red;*/
+        bottom: 50px;
+      }
+      #topCarousel .carousel-item:nth-of-type(4) .carousel-caption{
+        /*border: 1px solid red;*/
+        bottom: 50px;
+      }
+      .p_text{
+        bottom: -100px;
+      }
+    
+      /*8. 캐로셀 배경 이미지를 어둡게 하여 위의 이미지 컨텐츠 부각시키기*/
+      #topCarousel .carousel-item:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+      }
+
+      /*9. 캐로셀 좌우 버튼을 마우스를 올리면 나타나도록 설정*/
+      #topCarousel .carousel-control-next{
+        right: -200px;
+        transition: right 1s;
+      }
+
+      #topCarousel .carousel-control-prev{
+        left: -200px;
+        transition: left 1s;
+      }
+
+      #topCarousel:hover .carousel-control-next{
+        right: 0px;
+      }
+
+      #topCarousel:hover .carousel-control-prev{
+        left: 0px;
+      }
+
+      /*11. 캐로셀 좌우 버튼 호버시 색상 바꾸기*/
+      #topCarousel .carousel-control-next:hover{
+        color:var(--green);
+      } 
+      #topCarousel .carousel-control-prev:hover{
+        color:var(--red);
+      }      
+
+      /*12. 캐로셀 하단 인디케이터 버튼 활성화시 스타일 변경*/
+      #topCarousel .carousel-indicators .active{
+        background-color:var(--gold;)
+      }
+      /*16.loading img 위치잡기*/
+      .loading .d-flex img{
+        position: absolute;
+        top: 50%;
+        width: 200px;
+        margin-top: -48px;
+      }
+      .loading{
+        height: 100vh;}
+     /*21. navbar의 배경색을 커스텀*/
+      .bg-black{
+        background-color: var(--black);
+      }
+      /*25.네브바의 height 설정하고 txt의 스타일 변경*/
+    .navbar-nav .nav-link{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
+            color:var(--gold);
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        color:var(--white);
+    }
+    /*29.세번째 메뉴의 배경이미지*/
+    section#philosophy{
+        background: url(../img/3st_img/DiaryHeroArticle01.png) no-repeat center / cover fixed;
+        padding: 80px;
+    }
+    /*34.scrollspy를 위한 설정*/
+    body {
+      position: relative;
+    }
+    /*42.다섯번째 메뉴의 배경이미지*/
+    section#GucciCF{
+        background: url(../img/4st_img/youtubeBG02.png) no-repeat center / cover fixed;
+        padding: 80px;
+    }
+    .bo{
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+    /*52.card-body안의 텍스트 스타일*/
+    .card-body .card-title{
+        color:var(--green);
+    }
+    .card-body .card-text::before{
+        content:" ";
+        width: 70%;
+        height: 5px;
+        background-color: var(--red);
+        /*color: var(--green);*/
+        display: block;
+        margin-bottom: 10px;
+    }
+    /*59.마지막 하단의 배경이미지*/
+    section#FAQ{
+        background: url(../img/4st_img/youtubeBG02.png) no-repeat center / cover fixed;
+        /*padding: 80px;*/
+    }
+    .btn-black{
+        background-color: black;
+        color:white;
+        border-color:black;
+    }
+    .form-control::placeholder{
+        color:white;
+    }
+    #inputState option{
+        color:gray;
+    }
+    .bg-black{
+        background-color: black
+    }
+    /*64. waypoint가 작동하기 전 원하는 요소들을 보이지 않도록 설정*/
+    .wp1, .wp2 , .wp3, .wp4, .wp5, .wp6, .wp7, .wp8{
+        visibility: hidden;
+    }
+    .animate__animated{
+        visibility: visible;
+    }
+
